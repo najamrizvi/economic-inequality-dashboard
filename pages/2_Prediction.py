@@ -66,18 +66,28 @@ for i, feature in enumerate(feature_columns):
 
     with cols[i % 3]:
 
-        if df[feature].dtype == "object":
-
-            value = st.selectbox(
-                feature,
-                df[feature].unique()
-            )
-
-        else:
+        # Numeric Columns
+        if pd.api.types.is_numeric_dtype(df[feature]):
 
             value = st.number_input(
                 feature,
                 value=float(df[feature].mean())
+            )
+
+        # Categorical Columns
+        else:
+
+            options = (
+                df[feature]
+                .dropna()
+                .astype(str)
+                .unique()
+                .tolist()
+            )
+
+            value = st.selectbox(
+                feature,
+                options
             )
 
         input_data[feature] = value
@@ -94,15 +104,28 @@ input_df = pd.DataFrame([input_data])
 
 for col in input_df.columns:
 
-    if input_df[col].dtype == "object":
+    if not pd.api.types.is_numeric_dtype(input_df[col]):
 
         input_df[col] = pd.factorize(input_df[col])[0]
+
+# ------------------------------------------------------------
+# ENSURE COLUMN ORDER MATCHES TRAINING DATA
+# ------------------------------------------------------------
+
+input_df = input_df[feature_columns]
 
 # ------------------------------------------------------------
 # SCALE INPUT
 # ------------------------------------------------------------
 
-input_scaled = scaler.transform(input_df)
+try:
+
+    input_scaled = scaler.transform(input_df)
+
+except Exception as e:
+
+    st.error(f"Scaling Error: {e}")
+    st.stop()
 
 # ------------------------------------------------------------
 # PREDICTION BUTTON
@@ -110,23 +133,29 @@ input_scaled = scaler.transform(input_df)
 
 if st.button("🚀 Predict Poverty Class"):
 
-    prediction = model.predict(input_scaled)[0]
+    try:
 
-    st.markdown("---")
+        prediction = model.predict(input_scaled)[0]
 
-    st.subheader("📊 Prediction Result")
+        st.markdown("---")
 
-    if prediction == "Low":
+        st.subheader("📊 Prediction Result")
 
-        st.success("🟢 Low Poverty Region")
+        if prediction == "Low":
 
-    elif prediction == "Medium":
+            st.success("🟢 Low Poverty Region")
 
-        st.warning("🟡 Medium Poverty Region")
+        elif prediction == "Medium":
 
-    else:
+            st.warning("🟡 Medium Poverty Region")
 
-        st.error("🔴 High Poverty Region")
+        else:
+
+            st.error("🔴 High Poverty Region")
+
+    except Exception as e:
+
+        st.error(f"Prediction Error: {e}")
 
 # ------------------------------------------------------------
 # FOOTER

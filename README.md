@@ -78,16 +78,7 @@ Enables side-by-side comparison of countries and regions.
 5. Dashboard Development
 6. Interactive User Experience Design
 
-## Screenshots
 
-Create a `screenshots` folder and add dashboard images.
-
-```markdown
-![Dashboard Overview](screenshots/overview.png)
-
-![Country Analysis](screenshots/country_analysis.png)
-
-![Trend Analysis](screenshots/trends.png)
 ```
 
 ## Key Insights

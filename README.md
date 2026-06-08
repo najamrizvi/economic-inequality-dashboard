@@ -1,193 +1,111 @@
-# 🌍 Economic Inequality Intelligence Platform
+# Economic Inequality Dashboard
 
-A professional AI + Machine Learning dashboard designed to analyze, visualize, and predict global poverty & economic inequality patterns using Streamlit and Scikit-learn.
+## Overview
 
----
+The Economic Inequality Dashboard is an interactive data analytics project designed to explore global poverty and economic inequality trends across countries and regions. The dashboard enables users to analyze socioeconomic indicators, compare countries, identify trends, and gain insights into the factors influencing poverty and wealth distribution worldwide.
 
-# 🚀 Project Overview
+## Problem Statement
 
-The Economic Inequality Intelligence Platform is a portfolio-grade Machine Learning application that provides:
+Economic inequality remains one of the most significant global challenges. Understanding how poverty, income distribution, and economic indicators vary across countries is essential for policymakers, researchers, and organizations working toward sustainable development.
 
-- 📊 Interactive analytics dashboard
-- 🤖 AI-powered poverty classification
-- 📈 Machine Learning model insights
-- 🌍 Economic inequality visualizations
-- 📉 Feature importance analysis
-- 🧠 Real-time prediction system
+This project aims to transform complex socioeconomic data into meaningful visual insights through an interactive dashboard.
 
-This project demonstrates a complete end-to-end Machine Learning workflow integrated into a modern Streamlit dashboard.
+## Objectives
 
----
+* Analyze global poverty and economic inequality indicators.
+* Compare economic conditions across countries and regions.
+* Identify trends and patterns in socioeconomic development.
+* Provide interactive visualizations for data exploration.
+* Support data-driven understanding of global inequality.
 
-# 🧠 Machine Learning Workflow
+## Features
 
-The project follows a professional ML pipeline:
+* Interactive Streamlit Dashboard
+* Country-Level Analysis
+* Economic Indicator Comparison
+* Poverty Trend Visualization
+* Dynamic Filtering and Exploration
+* Data-Driven Insights
+* User-Friendly Interface
 
-1. Data Loading
-2. Data Cleaning
-3. Missing Value Handling
-4. Exploratory Data Analysis (EDA)
-5. Data Visualization
-6. Label Encoding
-7. Feature Scaling
-8. SMOTE Balancing
-9. Train-Test Split
-10. Multiple Model Training
-11. Hyperparameter Tuning
-12. Model Evaluation
-13. Feature Importance Analysis
-14. Streamlit Deployment
+## Dataset
 
----
+The project utilizes a Global Poverty and Economic Inequality dataset containing socioeconomic indicators related to:
 
-# 🤖 Machine Learning Models Used
+* Poverty Levels
+* Income Distribution
+* Economic Development Metrics
+* Regional Comparisons
+* Country-Level Statistics
+* Wealth and Inequality Indicators
 
-- Logistic Regression
-- Random Forest Classifier
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Decision Tree Classifier
+## Technologies Used
 
-### ✅ Best Model
-Random Forest Classifier
+* Python
+* Pandas
+* NumPy
+* Plotly
+* Streamlit
+* Matplotlib
+* Seaborn
+* Git
+* GitHub
 
----
+## Dashboard Components
 
-# 📊 Dashboard Features
+### Global Overview
 
-## 🌍 Homepage
-- Premium dark UI
-- KPI cards
-- Project overview
-- Modern dashboard design
+Provides a high-level view of poverty and inequality metrics across multiple countries.
 
-## 📈 Analytics Dashboard
-- Poverty distribution analysis
-- Correlation heatmaps
-- Interactive Plotly charts
-- Feature exploration
+### Country Analysis
 
-## 🤖 AI Prediction System
-- Real-time poverty classification
-- Economic indicator input system
-- Machine Learning predictions
+Allows users to explore economic indicators for individual countries.
 
-## 📊 Model Insights
-- Model accuracy
-- Confusion matrix
-- Feature importance
-- ML evaluation metrics
+### Trend Analysis
 
-## 📖 About Project
-- Workflow explanation
-- Technology stack
-- Business impact
-- Developer information
+Visualizes changes in poverty and inequality over time.
 
----
+### Comparative Analysis
 
-# 🛠 Technologies Used
+Enables side-by-side comparison of countries and regions.
 
-## Programming Language
-- Python
+## Project Workflow
 
-## Libraries & Frameworks
-- Streamlit
-- Pandas
-- NumPy
-- Scikit-learn
-- Plotly
-- Matplotlib
-- Seaborn
-- Imbalanced-learn
-- Statsmodels
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Exploratory Data Analysis (EDA)
+4. Data Visualization
+5. Dashboard Development
+6. Interactive User Experience Design
 
----
+## Screenshots
 
-# 📂 Project Structure
+Create a `screenshots` folder and add dashboard images.
 
-```plaintext
-economic-inequality-dashboard/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-│
-├── dataset/
-│   └── global_poverty_economic_inequality.csv
-│
-├── models/
-│   ├── inequality_model.pkl
-│   └── scaler.pkl
-│
-├── pages/
-│   ├── 1_Analytics.py
-│   ├── 2_Prediction.py
-│   ├── 3_Model_Insights.py
-│   └── 4_About_Project.py
-│
-└── notebooks/
-    └── Economic_Inequality_Classification_System.ipynb
+```markdown
+![Dashboard Overview](screenshots/overview.png)
+
+![Country Analysis](screenshots/country_analysis.png)
+
+![Trend Analysis](screenshots/trends.png)
 ```
 
----
+## Key Insights
 
-# ▶️ How to Run the Project
+* Economic inequality varies significantly across countries and regions.
+* Poverty indicators often correlate with broader economic development measures.
+* Interactive exploration helps identify trends and disparities that may not be obvious from raw data alone.
 
-## 1️⃣ Clone Repository
+## Future Improvements
 
-```bash
-git clone <your-github-repo-link>
-```
+* Integration with live economic data sources
+* Additional socioeconomic indicators
+* Advanced statistical analysis
+* Predictive analytics and forecasting
+* Enhanced regional comparison tools
 
-## 2️⃣ Install Requirements
+## Author
 
-```bash
-pip install -r requirements.txt
-```
+Najam Rizvi
 
-## 3️⃣ Run Streamlit App
-
-```bash
-streamlit run app.py
-```
-
----
-
-# 🌍 Future Improvements
-
-- Real-time global economic APIs
-- Advanced AI forecasting
-- Geographical poverty mapping
-- Deep Learning integration
-- Cloud database integration
-
----
-
-# 👨‍💻 Developer
-
-## Syed Najam Ul Hassan Rizvi
-
-Aspiring Data Analyst & Machine Learning Developer
-
-### Skills
-- Data Analytics
-- Machine Learning
-- Streamlit Development
-- Data Visualization
-- Python Programming
-
----
-
-# ⭐ Project Status
-
-✅ Completed  
-✅ Deployment Ready  
-✅ Portfolio Ready  
-✅ GitHub Ready  
-
----
-
-# 📜 License
-
-This project is developed for educational and portfolio purposes.
+GitHub: https://github.com/najamrizvi
